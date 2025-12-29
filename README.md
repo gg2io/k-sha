@@ -1,3 +1,3 @@
-# k-sha
+# K-SHA
 
-A new project.
+A new dnb website for K-SHA
