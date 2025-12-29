@@ -43,7 +43,8 @@ body {
 
 .name {
 	font-family: NOZSTUDIO, Helvetica;
-	font-size: clamp(4rem, 10vw, 9rem)
+	font-size: clamp(2.5rem, 10vw, 9rem);
+	white-space: nowrap;
 }
 
 .follow {
