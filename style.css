@@ -1,0 +1,81 @@
+a img {border:none}
+a:link, a:visited{color:#228B22 ;text-decoration:none;border: 0;}
+a:hover {text-decoration:underline;}
+
+@viewport {
+	width: device-width;
+	zoom: 1.1;
+	min-zoom: 0.4;
+	max-zoom: 2;
+	user-zoom: fixed;
+	}
+
+@font-face {
+    font-family:'NOZSTUDIO';
+    src: url(fonts/NOZSTUDIO.ttf);
+    
+    font-weight: normal;
+    font-style: normal; }
+
+@font-face {
+	font-family:'Helvetica Black Condensed Oblique';
+	src: url(fonts/HelveticaBlackCondensedOblique.otf);
+		
+	font-weight: normal;
+	font-style: normal; }  
+	
+body {
+	background-color: #000;
+	color: #228B22;
+	font-family: Helvetica;
+	text-align: center;
+	font-size: 40px;
+	/*border: 1px solid red;*/
+}
+
+#wrapper {
+	padding-top: 50px;
+	width: 90%;
+	max-width: 1500px;
+	margin: 100px auto;
+	/*border: 1px solid rgb(0, 187, 255);*/
+}
+
+.name {
+	font-family: NOZSTUDIO, Helvetica;
+	font-size: clamp(4rem, 10vw, 9rem)
+}
+
+.follow {
+    font-family: Helvetica Black Condensed Oblique;
+	font-size: clamp(1.5rem, 2.5vw, 3rem); 
+	margin-top: 100px;
+	line-height: 0.9em;
+}
+
+.mix {
+    font-family: Helvetica Black Condensed Oblique;
+    font-size: clamp(1rem, 1.5vw, 2rem);  
+	margin-top: 30px;
+	line-height: 0.9em;
+}
+
+.contact {
+    font-family: Helvetica Black Condensed Oblique;
+    font-size: 15px;
+	padding-top: 50px;
+}
+
+#home_image {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	margin: 30px auto;
+	display: block;
+}
+
+img {
+	margin-right: 9px;
+	height: auto;
+	max-width: 50px;
+}
