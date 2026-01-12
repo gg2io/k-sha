@@ -3,17 +3,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const navMenu = document.querySelector('.nav-menu');
   const header = document.getElementById('main-header');
   const isHomePage = document.body.classList.contains('home');
-  const hasVisited = sessionStorage.getItem('hasVisited');
+  const hasVisitedOtherPage = sessionStorage.getItem('hasVisitedOtherPage');
 
   // Trigger navbar slide-in animation
-  if (isHomePage && hasVisited) {
-    // Skip animation on subsequent visits
-    header.classList.add('nav-visible');
-  } else {
-    // Play animation on first visit
+  if (isHomePage) {
+    // Home page - always animate menu, but logo is hidden
     setTimeout(() => {
       header.classList.add('nav-visible');
     }, 100);
+    // Clear the flag when returning to home
+    sessionStorage.removeItem('hasVisitedOtherPage');
+  } else {
+    // Other pages - animate only on first visit after leaving home
+    if (hasVisitedOtherPage) {
+      // Already visited another page, show immediately
+      header.classList.add('nav-visible');
+    } else {
+      // First page after home, animate the logo
+      setTimeout(() => {
+        header.classList.add('nav-visible');
+      }, 100);
+      // Mark that we've visited a non-home page
+      sessionStorage.setItem('hasVisitedOtherPage', 'true');
+    }
   }
 
   // Toggle mobile menu on click
@@ -28,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       navMenu.classList.remove('active');
-      // Mark that user has navigated away from home
-      sessionStorage.setItem('hasVisited', 'true');
     });
   });
 });
