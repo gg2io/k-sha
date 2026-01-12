@@ -106,11 +106,14 @@ body:not(.home) .nav-logo {
 	margin: 0;
 	padding: 0;
 	align-items: center;
+}
+
+body.home .nav-menu {
 	transform: translateX(-100vw);
 	opacity: 0;
 }
 
-#main-header.nav-visible .nav-menu {
+body.home #main-header.nav-visible .nav-menu {
 	transform: translateX(0);
 	opacity: 1;
 	transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, opacity 0.8s ease 0.1s;
@@ -387,8 +390,8 @@ body:not(.home) .nav-logo {
 		transition: left 0.4s ease;
 		z-index: 99;
 		box-shadow: 2px 0 8px rgba(0, 0, 0, 0.8);
-		transform: none;
-		opacity: 1;
+		transform: none !important;
+		opacity: 1 !important;
 	}
 
 	.nav-menu.active {
