@@ -363,11 +363,6 @@ body {
 		height: 4px;
 	}
 
-	.nav-logo {
-		transform: none;
-		opacity: 1;
-	}
-
 	.nav-menu {
 		position: fixed;
 		top: 70px;
@@ -461,16 +456,6 @@ body {
 
 	.menu-toggle span {
 		height: 3px;
-	}
-
-	.nav-logo {
-		transform: none;
-		opacity: 1;
-	}
-
-	.nav-menu {
-		transform: none;
-		opacity: 1;
 	}
 
 	.page-section {
