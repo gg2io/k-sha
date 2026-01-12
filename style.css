@@ -79,8 +79,12 @@ body {
 }
 
 body.home .nav-logo {
-	visibility: hidden;
+	visibility: hidden !important;
 	pointer-events: none;
+}
+
+body:not(.home) .nav-logo {
+	visibility: visible;
 }
 
 #main-header.nav-visible .nav-logo {
