@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
+  const header = document.getElementById('main-header');
+
+  // Trigger navbar slide-in animation
+  setTimeout(() => {
+    header.classList.add('nav-visible');
+  }, 100);
 
   // Toggle mobile menu on click
   if (menuToggle) {
