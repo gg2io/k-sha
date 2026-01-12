@@ -78,6 +78,11 @@ body {
 	opacity: 0;
 }
 
+body.home .nav-logo {
+	visibility: hidden;
+	pointer-events: none;
+}
+
 #main-header.nav-visible .nav-logo {
 	transform: translateX(0);
 	opacity: 1;
