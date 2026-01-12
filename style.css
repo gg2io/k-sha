@@ -397,7 +397,7 @@ body {
 	}
 
 	.page-section {
-		padding: 40px 20px;
+		padding: 80px 20px 40px;
 		min-height: calc(100vh - 70px);
 	}
 
@@ -474,7 +474,7 @@ body {
 	}
 
 	.page-section {
-		padding: 30px 15px;
+		padding: 80px 15px 30px;
 		min-height: calc(100vh - 65px);
 	}
 
